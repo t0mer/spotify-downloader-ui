@@ -10,3 +10,5 @@ services:
     restart: always
     volumes:
       - ./spotify-downloader-ui/downloads:/app/downloads
+    ports:
+      - "8080:8080"
