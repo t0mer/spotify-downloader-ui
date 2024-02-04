@@ -18,11 +18,11 @@ COPY requirements.txt /tmp
 RUN pip3 install -r /tmp/requirements.txt
 
 RUN mkdir -p /app/downloads
-RUN mkdir /.spotdl
+RUN mkdir /root/.spotdl
 
-RUN chmod 1777 /.spotdl
+RUN chmod 1777 /root/.spotdl
 RUN chmod 1777 /app/downloads
 
 WORKDIR /app
 
-CMD spotdl web --keep-alive --web-use-output-dir --output /app/downloads
+CMD spotdl web --webui-host 0.0.0.0 --keep-alive --web-use-output-dir --output /app/downloads
