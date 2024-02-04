@@ -21,4 +21,4 @@ RUN mkdir -p /app/downloads
 
 WORKDIR /app
 
-CMD spotdl web --port 8080 --keep-alive --web-use-output-dir --output /app/downloads
+CMD spotdl web --keep-alive --web-use-output-dir --output /app/downloads
