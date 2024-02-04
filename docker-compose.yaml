@@ -1,0 +1,12 @@
+
+---
+version: "3.7"
+
+services:
+
+  spotify-downloader-ui:
+    image: techblog/spotify-downloader-ui
+    container_name: spotify-downloader-ui
+    restart: always
+    volumes:
+      - ./spotify-downloader-ui/downloads:/app/downloads
