@@ -18,6 +18,10 @@ COPY requirements.txt /tmp
 RUN pip3 install -r /tmp/requirements.txt
 
 RUN mkdir -p /app/downloads
+RUN mkdir /.spotdl
+
+RUN chmod 1777 /.spotdl
+RUN chmod 1777 /app/downloads
 
 WORKDIR /app
 
